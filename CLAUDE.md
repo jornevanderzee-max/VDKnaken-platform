@@ -47,11 +47,9 @@ Lees eerst `docs/plan.md`. Dat is het goedgekeurde plan met het datamodel, de sc
 - Database: PostgreSQL in de container `db`. De verbinding staat in `DATABASE_URL`.
 
 ## Stand van zaken
-- **Stap 0 is gebouwd, maar nog niet afgerond.**
+- **Stap 0 is gebouwd en gecontroleerd in de echte Codespace (01-10-2026). Wacht op akkoord van de opdrachtgever.**
   - Klaar: Django-project (`config/`), de vijf apps uit het plan, `accounts.Gebruiker` (inloggen met e-mail, Argon2) met de eerste migratie, vertaalbestanden (`locale/nl/`), Nederlandse startpagina, Django-beheer op `/beheer/`, vaste versies in `requirements.txt`. 8 tests groen.
   - Tests bewaken de vertalingen: geen onvertaalde teksten, `django.po` bevat alle teksten uit de code, `django.mo` is bijgewerkt.
-  - Gebouwd en getest in een **noodcontainer** (Alpine): de Codespace kon op 25-09-2026 de eigen omgeving niet bouwen (foutcode 1302). Waarschijnlijke oorzaak: de Codespace is aangemaakt toen de bestanden nog niet in `.devcontainer/` stonden, en daarna omgebouwd van één container naar docker compose.
-- **Volgende: stap 0 afronden.**
-  1. Opdrachtgever maakt een nieuwe Codespace aan (oude verwijderen).
-  2. Controleren: Postgres bereikbaar, Mailpit op poort 8025, WeasyPrint-bibliotheken (pango) aanwezig, `python manage.py test` groen.
-  3. Akkoord van de opdrachtgever, dan door naar stap 1.
+  - Omgeving: `.devcontainer/Dockerfile` gebruikt `mcr.microsoft.com/devcontainers/python:3-3.12-bookworm` en verwijdert de Yarn-pakketbron (die liet `apt-get update` mislukken, waardoor de Codespace in recovery mode startte).
+  - Gecontroleerd: Postgres bereikbaar (`db`), Mailpit op poort 8025, pango/harfbuzz aanwezig (proef-PDF met WeasyPrint gelukt). Het pakket `weasyprint` zelf komt pas in `requirements.txt` bij de stap die PDF's maakt.
+- **Volgende:** akkoord op stap 0, dan door naar stap 1.
