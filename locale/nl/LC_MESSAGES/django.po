@@ -1,0 +1,108 @@
+# Nederlandse teksten van het VDK Arbeidsvoorwaardenplatform.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: VDK Arbeidsvoorwaardenplatform\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-01 09:12+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: accounts/admin.py:37
+msgid "Rights"
+msgstr "Rechten"
+
+#: accounts/admin.py:38
+msgid "Dates"
+msgstr "Datums"
+
+#: accounts/apps.py:9
+msgid "Accounts"
+msgstr "Accounts"
+
+#: accounts/models.py:30
+msgid "email address"
+msgstr "e-mailadres"
+
+#: accounts/models.py:31
+msgid "name"
+msgstr "naam"
+
+#: accounts/models.py:32
+msgid "active"
+msgstr "actief"
+
+#: accounts/models.py:35
+msgid "super administrator"
+msgstr "superbeheerder"
+
+#: accounts/models.py:37
+msgid ""
+"Super administrators manage the central VDKnaken, all companies and all "
+"accounts."
+msgstr "Superbeheerders beheren de centrale VDKnaken, alle bedrijven en alle accounts."
+
+#: accounts/models.py:39
+msgid "created at"
+msgstr "aangemaakt op"
+
+#: accounts/models.py:50
+msgid "user"
+msgstr "gebruiker"
+
+#: accounts/models.py:51
+msgid "users"
+msgstr "gebruikers"
+
+#: bedrijven/apps.py:9
+msgid "Companies"
+msgstr "Bedrijven"
+
+#: catalogus/apps.py:9
+msgid "Catalogue"
+msgstr "Catalogus"
+
+#: config/settings.py:114
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: config/urls.py:8
+msgid "VDK working conditions – management"
+msgstr "VDK Arbeidsvoorwaarden – beheer"
+
+#: config/urls.py:9
+msgid "VDK management"
+msgstr "VDK-beheer"
+
+#: portaal/apps.py:9
+msgid "Portal"
+msgstr "Portaal"
+
+#: publiek/apps.py:9
+msgid "Public pages"
+msgstr "Publieke pagina's"
+
+#: templates/base.html:7 templates/start.html:5
+msgid "VDK working conditions platform"
+msgstr "VDK Arbeidsvoorwaardenplatform"
+
+#: templates/start.html:7
+msgid ""
+"Every VDK company puts together its own page with its working conditions: "
+"one page for employees, one page for recruitment, and a PDF with a QR code."
+msgstr "Elk VDK-bedrijf stelt een eigen pagina met zijn arbeidsvoorwaarden samen: een pagina voor medewerkers, een pagina voor werving en een PDF met QR-code."
+
+#: templates/start.html:12
+msgid ""
+"The platform is under construction. More will appear here after each "
+"building step."
+msgstr "Het platform wordt nog gebouwd. Na elke bouwstap verschijnt hier meer."
+
+#: templates/start.html:13
+msgid "Log in to management"
+msgstr "Inloggen bij het beheer"

@@ -43,12 +43,15 @@ Lees eerst `docs/plan.md`. Dat is het goedgekeurde plan met het datamodel, de sc
 - App starten: `python manage.py runserver 0.0.0.0:8000` en dan tabblad **Ports**, poort 8000.
 - Testpostvak (alle uitgaande mail): tabblad **Ports**, poort 8025.
 - Tests draaien: `python manage.py test`
+- Superbeheerder aanmaken: `python manage.py createsuperuser`. Het beheer staat op `/beheer/`.
 - Database: PostgreSQL in de container `db`. De verbinding staat in `DATABASE_URL`.
 
 ## Stand van zaken
-- **Stap 0 is deels klaar.** De ontwikkelomgeving (`.devcontainer/`), dit bestand, de README en het plan zijn vanaf een Windows-laptop zonder Python voorbereid. Ze zijn nog **niet getest**.
-- **Volgende: stap 0 afmaken.**
-  1. Controleer dat de Codespace goed opstart: Postgres bereikbaar, Mailpit op poort 8025, WeasyPrint-bibliotheken aanwezig.
-  2. Maak het Django-project aan: `config/` en de apps uit het plan, met `accounts.Gebruiker` vóór de eerste migratie.
-  3. Zet de vertaalbestanden op en maak een eenvoudige Nederlandse startpagina.
-  4. Leg de exacte pakketversies vast in `requirements.txt`.
+- **Stap 0 is gebouwd, maar nog niet afgerond.**
+  - Klaar: Django-project (`config/`), de vijf apps uit het plan, `accounts.Gebruiker` (inloggen met e-mail, Argon2) met de eerste migratie, vertaalbestanden (`locale/nl/`), Nederlandse startpagina, Django-beheer op `/beheer/`, vaste versies in `requirements.txt`. 8 tests groen.
+  - Tests bewaken de vertalingen: geen onvertaalde teksten, `django.po` bevat alle teksten uit de code, `django.mo` is bijgewerkt.
+  - Gebouwd en getest in een **noodcontainer** (Alpine): de Codespace kon op 25-09-2026 de eigen omgeving niet bouwen (foutcode 1302). Waarschijnlijke oorzaak: de Codespace is aangemaakt toen de bestanden nog niet in `.devcontainer/` stonden, en daarna omgebouwd van één container naar docker compose.
+- **Volgende: stap 0 afronden.**
+  1. Opdrachtgever maakt een nieuwe Codespace aan (oude verwijderen).
+  2. Controleren: Postgres bereikbaar, Mailpit op poort 8025, WeasyPrint-bibliotheken (pango) aanwezig, `python manage.py test` groen.
+  3. Akkoord van de opdrachtgever, dan door naar stap 1.

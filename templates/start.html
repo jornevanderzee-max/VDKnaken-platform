@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block inhoud %}
+  <h1>{% translate "VDK working conditions platform" %}</h1>
+  <p class="inleiding">
+    {% blocktranslate trimmed %}
+      Every VDK company puts together its own page with its working conditions: one page for employees,
+      one page for recruitment, and a PDF with a QR code.
+    {% endblocktranslate %}
+  </p>
+  <p>{% translate "The platform is under construction. More will appear here after each building step." %}</p>
+  <p><a class="knop" href="{% url 'admin:index' %}">{% translate "Log in to management" %}</a></p>
+{% endblock %}

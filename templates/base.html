@@ -1,0 +1,16 @@
+{% load i18n static %}<!doctype html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titel %}{% translate "VDK working conditions platform" %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/basis.css' %}">
+  {% block kop %}{% endblock %}
+</head>
+<body>
+  <main class="pagina">
+    {% block inhoud %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -11,6 +11,8 @@ services:
     environment:
       DJANGO_DEBUG: "1"
       DJANGO_SECRET_KEY: "alleen-voor-ontwikkeling-niet-in-productie-gebruiken"
+      DJANGO_ALLOWED_HOSTS: "localhost,127.0.0.1,.app.github.dev"
+      DJANGO_CSRF_TRUSTED_ORIGINS: "https://*.app.github.dev"
       DATABASE_URL: "postgres://vdk:vdk@db:5432/vdk"
       EMAIL_HOST: "mailpit"
       EMAIL_PORT: "1025"
